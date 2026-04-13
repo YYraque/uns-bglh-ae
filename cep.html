@@ -44,7 +44,8 @@
               cidadeInput.value = data.localidade;
               ufInput.value = data.uf;
           } catch (error){
-            
+            console.error("Erro:", error);
+            alert("Erro ao buscar CEP");
           }
       }
     </script>
