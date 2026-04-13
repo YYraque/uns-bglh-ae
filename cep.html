@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar CEP:</title>
+</head>
+<body>
+    <h1>Consulta de CEP</h1>
+    <input type="text" id="cep" placeholder="Digite o CEP">
+    <button onclick="buscarCEP()">Digite o CEP</button>
+    <input type="text" id="logradouro" placeholder="Logradouro">
+    <input type="text" id="numero" placeholder="Número">
+    <input type="text" id="complemento" placeholder="Complemento (casa, Apto. Bloco, Condomínio)">
+    <input type="text" id="bairro" placeholder="Bairro">
+    <input type="text" id="cidade" placeholder="Cidade">
+    <input type="text" id="uf" placeholder="UF">
+    <script>
+        const cepInput = document.querySelector("#cep");
+        const logradouroInput = document.querySelector("#logradouro");
+        const bairroInput = document.querySelector("#bairro");
+        const cidadeInput = document.querySelector("#cidade");
+        const ufInput = document.querySelector("#uf");
+        async function buscarCEP(){
+            let cep = cepInput.value.replace(/\D/g,"");
+            if (cep.length !== 8){
+                alert("CEP inválido!");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
